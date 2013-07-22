@@ -49,7 +49,6 @@ var checkUrl = function(url, checksfile) {
         }
 
         var outJson = JSON.stringify(out, null, 4);
-        // return outJson;
         console.log(outJson);
     });
 
@@ -89,9 +88,8 @@ var clone = function(fn) {
     // Workaround for commander.js issue.
     // http://stackoverflow.com/a/6772648
     return fn.bind({});
-};                                                         //,clone(validUrl), URL_DEFAULT
-
-if (require.main != module) {
+};                                                       
+ if (require.main != module) {
 } else {
     program
             .option('-c, --checks <check_file>', 'Path to checks.json')
